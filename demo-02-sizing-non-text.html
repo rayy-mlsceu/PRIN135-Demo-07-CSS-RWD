@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo: Non-Text Relative Sizing</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Demo: Non-Text Relative Sizing</title>
+		<link rel="stylesheet" href="css/style.css">
+		<style>
+		* {
+			box-sizing: border-box;
+		}
 
-        .main {
-            background-color: lightpink;
-            margin: 0 auto;
-        }
+		.main {
+			background-color: lightpink;
+			margin: 0 auto;
+			width: 500px;
+			height: 300px;
+		}
 
-        .subsection {
-            background-color: lightblue;
-        }
-    </style>
-</head>
+		.subsection {
+			background-color: lightblue;
+			width: 50%;
+			height: 50%;
 
-<body>
-    <div class="main">
-        <div class="subsection"></div>
-    </div>
-    <div class="navigation">
-        <a href="index.html">Back to Home</a>
-    </div>
-</body>
+			margin-left: 25%;
+		}
+		</style>
+	</head>
+
+	<body>
+		<div class="main">
+			<div class="subsection"></div>
+		</div>
+		<div class="navigation">
+			<a href="index.html">Back to Home</a>
+		</div>
+	</body>
 
 </html>

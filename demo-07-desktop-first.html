@@ -1,31 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo: Desktop First</title>
-    <style>
-        *,
-        *::before,
-        *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-    </style>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Demo: Desktop First</title>
+		<style>
+		*,
+		*::before,
+		*::after {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body {
+			background: #f3f4f6;
+		}
+		.container>div {
+			padding: 20px;
+			border-radius: 8px;
+			color: #fff;
+			background: #16a34a;
+		}
+		.container {
+			display: grid;
+			grid-gap: 12px;
+			padding: 10px;
+			min-height: 100vh;
 
-<body>
+			grid-template-columns: 200px 1fr 250px;
+			grid-template-rows: auto 1fr auto;
 
-    <div class="container">
-        <div class="header">header</div>
-        <div class="left-bar">left-bar</div>
-        <div class="main">main</div>
-        <div class="right-bar">right-bar</div>
-        <div class="footer">footer</div>
-    </div>
+			grid-template-areas:
+				"header header header"
+				"left-bar main right-bar"
+				"footer footer footer";
+		}
 
-</body>
+		.header{
+			grid-area: header;
+		}
+
+		.left-bar{
+			grid-area: left-bar;
+		}
+
+		.main{
+			grid-area: main;
+			min-height: 200px;
+		}
+
+		.right-bar{
+			grid-are: right-bar;
+		}
+
+		.footer{
+			grid-area: footer;
+		}
+
+		@media screen and (max-width: 1024px){
+			.container {
+				grid-template-columns: 1fr 2fr;
+				grid-template-rows: auto 1fr 1fr auto auto;
+				grid-template-areas:
+					"header header"
+					"left-bar main"
+					"right-bar main"
+					"footer footer";
+			}
+		}
+
+		@media screen and (max-width: 640px){
+			.container {
+				grid-template-columns: 1fr;
+				grid-template-rows: auto auto 1fr auto auto;
+				grid-template-areas:
+					"header"
+					"left-bar"
+					"main"
+					"right-bar"
+					"footer";
+			}
+		}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="container">
+			<div class="header">header</div>
+			<div class="left-bar">left-bar</div>
+			<div class="main">main</div>
+			<div class="right-bar">right-bar</div>
+			<div class="footer">footer</div>
+		</div>
+
+	</body>
 
 </html>

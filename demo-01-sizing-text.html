@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo: Text Relative Sizing</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        .parent {
-            border: 1px solid #333;
-            padding: 5px;
-        }
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Demo: Text Relative Sizing</title>
+		<link rel="stylesheet" href="css/style.css">
+		<style>
+		.parent {
+			border: 1px solid #333;
+			padding: 5px;
+		}
 
-        html {
-            /* Base font size */
-        }
+		html {
+			/* Base font size */
+			font-size: 16px;
+		}
 
-        .parent {
-            /* Parent font size */
-        }
+		.parent {
+			/* Parent font size */
+			font-size: 12px;
+		}
 
-        .em-size {
-            /* Relative to parent font size */
-        }
+		.em-size {
+			/* Relative to parent font size */
+			font-size: 2em;
+		}
 
-        .rem-size {
-            /* Relative to root font size */
-        }
+		.rem-size {
+			/* Relative to root font size */
+			font-size: 2rem;
+		}
 
-        
-    </style>
-</head>
 
-<body>
-    <h1>Relative Sizing Demo</h1>
-    <p>This text uses base font size (16px).</p>
-    <div class="parent">
-        <p>This text uses parent font size (12px).</p>
-        <p class="em-size">This text is sized using ems (2em. 12px * 2 = 24px).</p>
-        <p class="rem-size">This text is sized using rems (2rem. 16px * 2 = 32px).</p>
-    </div>
-    <div class="navigation">
-        <a href="index.html">Back to Home</a>
-    </div>
-</body>
+		</style>
+	</head>
+
+	<body>
+		<h1>Relative Sizing Demo</h1>
+		<p>This text uses base font size (16px).</p>
+		<div class="parent">
+			<p>This text uses parent font size (12px).</p>
+			<p class="em-size">This text is sized using ems (2em. 12px * 2 = 24px).</p>
+			<p class="rem-size">This text is sized using rems (2rem. 16px * 2 = 32px).</p>
+		</div>
+		<div class="navigation">
+			<a href="index.html">Back to Home</a>
+		</div>
+	</body>
 
 </html>

@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo: Scaling Background</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .full-background {
-            background-image: url('https://picsum.photos/id/237/720/450');
-        }
-    </style>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Demo: Scaling Background</title>
+		<link rel="stylesheet" href="css/style.css">
+		<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
 
-<body>
-    <div class="full-background">
-    </div>
-    <div class="navigation">
-        <a href="index.html">Back to Home</a>
-    </div>
-</body>
+		.full-background {
+			background-image: url('https://picsum.photos/id/237/720/450');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			height: 100vh;
+		}
+		</style>
+	</head>
+
+	<body>
+		<div class="full-background">
+		</div>
+		<div class="navigation">
+			<a href="index.html">Back to Home</a>
+		</div>
+	</body>
 
 </html>
